@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<launch>
+    <!-- LAUNCH INTERFACE -->
+    <arg name="gui" default="true" />
+    <arg name="robot_name" default="soft_hand"/>
+    <arg name="use_joint_state_publisher" default="true"/>
+    <arg name="rviz_config" default="$(find soft_hand_klampt_description)/config/rviz.rviz"/>
+
+    <!-- LAUNCH IMPLEMENTATION -->
+
+    <!-- #### -->
+
+    <!-- load the full robot in robot_description -->
+    <param name="robot_description" command="$(find xacro)/xacro $(find soft_hand_klampt_description)/model/$(arg robot_name).urdf"/>
+
+    <group if="$(arg use_joint_state_publisher)">
+        <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+            <param name="use_gui" value="$(arg gui)"/>
+            <!-- listens to each part -->
+            <rosparam param="source_list">[/soft_hand_klampt/joint_states]</rosparam>
+        </node>
+    </group>
+
+    <param name="publish_frequency" value="100"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  />
+
+    <!-- RViz for visualization -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rviz_config)" required="true"/>
+
+</launch>

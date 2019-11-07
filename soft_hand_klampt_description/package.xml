@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>soft_hand_klampt_description</name>
+  <version>0.0.0</version>
+  <description>The soft_hand_description package for simulation with Klampt</description>
+
+  <license>GPLv2</license>
+  
+  <author>George Jose Pollayil</author>
+  <maintainer email="mathewjosepollayil@gmail.com">Mathew Jose Pollayil</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+  </export>
+</package>
