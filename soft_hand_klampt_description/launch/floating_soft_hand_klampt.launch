@@ -3,7 +3,7 @@
 <launch>
     <!-- LAUNCH INTERFACE -->
     <arg name="gui" default="true" />
-    <arg name="robot_name" default="floating_soft_hand"/>
+    <arg name="robot_name" default="soft_hand_floating_robot"/>
     <arg name="static_tf" default="true" />
     <arg name="use_joint_state_publisher" default="true"/>
     <arg name="rviz_config" default="$(find soft_hand_klampt_description)/config/rviz.rviz"/>
@@ -13,7 +13,7 @@
     <!-- #### -->
 
     <!-- load the full robot in robot_description -->
-    <param name="robot_description" command="$(find xacro)/xacro $(find soft_hand_klampt_description)/model/$(arg robot_name).urdf"/>
+    <param name="robot_description" command="$(find xacro)/xacro $(find soft_hand_klampt_description)/model/$(arg robot_name).urdf.xacro"/>
 
     <group if="$(arg use_joint_state_publisher)">
         <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">

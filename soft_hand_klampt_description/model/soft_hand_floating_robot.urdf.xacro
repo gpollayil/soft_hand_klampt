@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="soft_hand_floating_robot">
+       
+  <!-- MODELS -->
+  <xacro:include filename="$(find soft_hand_klampt_description)/model/soft_hand_floating.urdf.xacro"/>
+    
+  <link name="world" />
+
+  <!-- RIGHT SOFTHAND -->
+  <xacro:soft_hand_floating parent="world" name="soft_hand" left="false" withAdaptiveTransmission="true" useMimicTag="true">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:soft_hand_floating>
+
+</robot>
