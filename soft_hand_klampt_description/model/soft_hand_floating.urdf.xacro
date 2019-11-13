@@ -423,12 +423,12 @@
 		<!-- PACMAN VERION ALREADY INCLUDES THE COUPLER, CLAMP AND BASE -->
 
 		<!-- KUKA_COUPLER -->
-		<xacro:kuka_coupler_floating parent="${parent}" name="${name}_kuka_coupler_floating">
+		<xacro:kuka_coupler_floating parent="${parent}" name="${name}_kuka_coupler">
 			<xacro:insert_block name="origin"/>
 		</xacro:kuka_coupler_floating>
 
 		<!-- CLAMP -->
-		<xacro:clamp parent="${name}_kuka_coupler_floating" name="${name}_clamp">
+		<xacro:clamp parent="${name}_kuka_coupler" name="${name}_clamp">
 			<origin xyz="0 0 0.01" rpy="0 0 0"/>
 		</xacro:clamp>
 

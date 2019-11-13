@@ -28,7 +28,7 @@
 
     <!-- Static Transform for world -->
     <group if="$(arg static_tf)">
-        <node pkg="tf" type="static_transform_publisher" name="tf_pub" args="0 0 0 0 1.57 0 /world /soft_hand_kuka_coupler 100"/>
+        <node pkg="tf" type="static_transform_publisher" name="tf_pub" args="0 0 0 0 1.57 0 /world /soft_hand_kuka_coupler_bottom 100"/>
     </group>
 
     <!-- RViz for visualization -->
