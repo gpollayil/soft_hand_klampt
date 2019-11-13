@@ -2,9 +2,9 @@
 
 <launch>
     <!-- LAUNCH INTERFACE -->
-    <arg name="gui" default="true" />
+    <arg name="gui" default="false" />
     <arg name="robot_name" default="soft_hand_floating_robot"/>
-    <arg name="static_tf" default="true" />
+    <arg name="static_tf" default="false" />
     <arg name="use_joint_state_publisher" default="true"/>
     <arg name="rviz_config" default="$(find soft_hand_klampt_description)/config/rviz.rviz"/>
 
