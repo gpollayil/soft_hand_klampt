@@ -254,6 +254,8 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        object:
+          Value: true
         soft_hand_clamp:
           Value: false
         soft_hand_index_distal_link:
@@ -332,13 +334,62 @@ Visualization Manager:
           Value: false
         soft_hand_thumb_proximal_link:
           Value: false
+        world:
+          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: false
       Show Axes: true
       Show Names: true
       Tree:
-        {}
+        world:
+          object:
+            {}
+          soft_hand_kuka_coupler_bottom:
+            soft_hand_kuka_coupler:
+              soft_hand_clamp:
+                soft_hand_softhand_base:
+                  soft_hand_palm_link:
+                    soft_hand_index_knuckle_link:
+                      soft_hand_index_fake_link1:
+                        soft_hand_index_proximal_link:
+                          soft_hand_index_fake_link2:
+                            soft_hand_index_middle_link:
+                              soft_hand_index_fake_link3:
+                                soft_hand_index_distal_link:
+                                  {}
+                    soft_hand_invisible_wire_link:
+                      {}
+                    soft_hand_little_knuckle_link:
+                      soft_hand_little_fake_link1:
+                        soft_hand_little_proximal_link:
+                          soft_hand_little_fake_link2:
+                            soft_hand_little_middle_link:
+                              soft_hand_little_fake_link3:
+                                soft_hand_little_distal_link:
+                                  {}
+                    soft_hand_middle_knuckle_link:
+                      soft_hand_middle_fake_link1:
+                        soft_hand_middle_proximal_link:
+                          soft_hand_middle_fake_link2:
+                            soft_hand_middle_middle_link:
+                              soft_hand_middle_fake_link3:
+                                soft_hand_middle_distal_link:
+                                  {}
+                    soft_hand_ring_knuckle_link:
+                      soft_hand_ring_fake_link1:
+                        soft_hand_ring_proximal_link:
+                          soft_hand_ring_fake_link2:
+                            soft_hand_ring_middle_link:
+                              soft_hand_ring_fake_link3:
+                                soft_hand_ring_distal_link:
+                                  {}
+                    soft_hand_thumb_knuckle_link:
+                      soft_hand_thumb_fake_link1:
+                        soft_hand_thumb_proximal_link:
+                          soft_hand_thumb_fake_link3:
+                            soft_hand_thumb_distal_link:
+                              {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -369,25 +420,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.3016457557678223
+      Distance: 0.73459792137146
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.4716280698776245
-        Y: 0.10158050060272217
-        Z: -0.10473214834928513
+        X: -0.2568991780281067
+        Y: 0.14613312482833862
+        Z: 0.05891938880085945
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.4503982663154602
+      Pitch: 0.280398964881897
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 6.058574676513672
+      Yaw: 5.8785858154296875
     Saved: ~
 Window Geometry:
   Displays:
