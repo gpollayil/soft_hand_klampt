@@ -2,6 +2,7 @@
 
 <launch>
     <!-- LAUNCH INTERFACE -->
+    <arg name="launch_rviz" default="false" />
     <arg name="gui" default="false" />                                  <!-- Should be false while using Klampt -->
     <arg name="static_tf" default="false" />                            <!-- Should be false while using Klampt -->
     <arg name="robot_name" default="soft_hand_floating_robot"/>
@@ -32,6 +33,8 @@
     </group>
 
     <!-- RViz for visualization -->
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rviz_config)" required="true"/>
+    <group if="$(arg launch_rviz)">
+        <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rviz_config)" required="true"/>
+    </group>
 
 </launch>
