@@ -24,7 +24,7 @@
     </collision>
   </link>
   <joint name="${parent}_${name}_base_joint" type="fixed">
-    <origin xyz="0 0 0.023" rpy="0 0 0"/>
+    <origin xyz="0 0 0.023" rpy="0 0 0.7854"/>
     <parent link="${name}_bottom"/>
     <child link="${name}"/>
   </joint>
